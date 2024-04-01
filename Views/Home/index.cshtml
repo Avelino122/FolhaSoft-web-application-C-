@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+   <title>Folha Software</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/js/site.js"></script>    
+    <link rel="stylesheet" href="/css/site.css">
+
+</head>
+<body>
+<div class="wrapper d-flex align-items-stretch">
+<nav id="sidebar">
+<div class="p-4 pt-5">
+                <a href="#" class="img logo rounded-circle mb-5"
+                    style="background-image: url(/imagens/FOTO_LARRY_JOHNSON.jpg);"></a>
+<ul class="list-unstyled components mb-5">
+<li class="active">
+<a id="inicio"><i class="fas fa-home"></i> Inicio</a>
+</li>
+<li>
+                        <a id="meusdados" href="#"><i class="fas fa-user"></i> Meus dados</a>
+</li>
+<li>
+                        <a id="notifica" href="#"><i class="fas fa-bell"></i> Notificações</a>
+</li>
+<li>
+                        <a id="holerite" href="#"><i class="fas fa-file-alt"></i> Holerites</a>
+</li>
+<li>
+                        <a id="fale" href="#"><i class="fas fa-comments"></i> Fale com RH</a>
+</li>
+<li>
+<a href="@Url.Action("Login", "account")" id="sair">
+    <i class="fas fa-sign-out-alt"></i> Sair
+</a>
+</li>
+</ul>
+<div class="footer">
+<p>
+</p>
+</div>
+</div>
+</nav>
+<div id="content" class="p-4 p-md-5">
+            <div id="inicio-view" style="display: block;">
+        @Html.Partial("~/Views/Inicio/telainicio.cshtml")
+    </div>
+            <div id="dados-view" style="display: none;">
+        @Html.Partial("~/Views/MeusDados/meusDados.cshtml")
+    </div>
+            <div id="notifica-view" style="display: none;">
+                @Html.Partial("~/Views/notificacoes/notifica.cshtml")
+            </div>
+            <div id="holerite-view" style="display: none;">
+                @Html.Partial("~/Views/holerites/holerites.cshtml")
+            </div>
+            <div id="fale-view" style="display: none;">
+                @Html.Partial("~/Views/faleComRH/faleComRH.cshtml")
+</div>
+</div>
+</body>
+</html>
